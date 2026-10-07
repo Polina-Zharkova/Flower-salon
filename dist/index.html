@@ -17,7 +17,7 @@
   <body class="page">
     <header class="page-header">
   <div class="page-header__logo">
-    <svg class="page-header__icon" width="150" height="150" aria-hidden="true">
+    <svg class="page-header__icon" width="150" height="150">
       <use href="assets/icons/logo.svg#logo"></use>
     </svg>
   </div>
@@ -48,10 +48,10 @@
     </ul>
   </nav>
   <div class="page-header__right">
-    <svg class="page-header__right-basket" aria-hidden="true">
+    <svg class="page-header__right-basket">
       <use href="assets/icons/basket.svg#basket"></use>
     </svg>
-    <svg class="page-header__right-like" aria-hidden="true">
+    <svg class="page-header__right-like">
       <use href="assets/icons/like.svg#like"></use>
     </svg>
   </div>
@@ -77,16 +77,14 @@
 </div>
 </main>
     <footer class="footer"><div class="page-footer">
-  <div class="page-footer__logo">
-    <svg class="page-header__icon" width="150" height="150" aria-hidden="true">
-      <use href="assets/icons/logo.svg#logo"></use>
-    </svg>
-    <p class="page-header__words">Цветы с душой</p>
-    <svg class="page-header__icon" width="150" height="150" aria-hidden="true">
-      <use href="assets/icons/logo.svg#logo"></use>
-    </svg>
+  <div class="page-footer__brand">
+      <p class="page-footer__words">Цветы с душой</p>
+      <a href="mailto:info@petallure.ru" class="page-footer__email"
+        >info@petallure.ru</a
+      >
   </div>
-  <div class="page-footer__catalog">
+
+  <div class="page-footer__information">
     <ul class="page-footer__lists">
       <li class="page-footer__items">
         Каталог
@@ -100,11 +98,10 @@
         </ul>
       </li>
     </ul>
-  </div>
-  <div class="page-footer__information">
+
     <ul class="page-footer__lists">
-      <li class="page-footer__items">Покупателям</li>
-      <ul class="page-footer__sub-list">
+      <li class="page-footer__items">Покупателям
+        <ul class="page-footer__sub-list">
         <li>
           <a href="#" class="page-footer__point-link">Доставка и оплата</a>
         </li>
@@ -112,14 +109,23 @@
           <a href="#" class="page-footer__point-link">Фото перед отправкой</a>
         </li>
         <li><a href="#" class="page-footer__point-link">Помощь флориста</a></li>
+      </li>
       </ul>
     </ul>
   </div>
+
   <div class="page-footer__contacts">
-    <h1 class="page-footer__address">Адрес</h1>
+<p class="page-footer__address">
+  <span class="page-footer__address-label">Адрес:</span> 
+  г. Тюмень, ул. Тюменская 
+</p>
     <a href="tel:+70000000000" class="page-footer__phone">8 (800) 000-00-00</a>
-    <h3 class="page-footer__schedule">Ежедневно 9:00-21:00</h3>
+    <p class="page-footer__schedule">Ежедневно 9:00-21:00</p>
   </div>
+  <div class="page-footer__copyright">
+    <p class="page-footer__copyright-words">© 2026 Petallure. Все права защищены.</p>
+  </div>
+  
 </div>
 </footer>
   </body>
