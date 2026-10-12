@@ -209,6 +209,117 @@ body {
   margin: 18px 78px;
   max-width: 500px;
 }
+.hero__btn {
+  margin: 20px 0 0 78px;
+}
+.catalog {
+  border-top: 1px solid rgba(255, 228, 196, 0.2);
+  padding: 0 60px;
+}
+.catalog__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 50px 0 50px;
+}
+.catalog__name {
+  margin: 0;
+  font-family: "Playfair Display", serif;
+  color: #FFE4C4;
+  font-size: 40px;
+}
+.catalog__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 55px;
+  padding: 0 0 40px;
+}
+.catalog__card {
+  display: flex;
+  flex-direction: column;
+}
+.catalog__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+.catalog__link:hover .catalog__image {
+  transform: scale(1.08);
+}
+.catalog__image-wrapper {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 0 24px rgba(0, 0, 0, 0.95);
+}
+.catalog__link {
+  font-family: "Instrument Sans", sans-serif;
+  color: #FFE4C4;
+  text-decoration: none;
+  text-align: center;
+}
+.delivery {
+  position: relative;
+  margin: 0 60px;
+  border-top: 1px solid rgba(255, 228, 196, 0.2);
+}
+.delivery ::before {
+  content: '';
+  position: absolute;
+  top: 50px;
+  bottom: 0;
+  left: 50%;
+  width: 4px;
+  background: #8a2a3c;
+  transform: translateX(-50%);
+  border-radius: 2px;
+}
+.delivery__step {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 37px;
+}
+.delivery__circle {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40px;
+  height: 40px;
+  background: #8a2a3c;
+  color: #FFE4C4;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  z-index: 2;
+}
+.delivery__card {
+  background: #FFE4C4;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  width: 40%;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  position: relative;
+}
+.delivery__card-left {
+  margin-right: auto;
+  margin-left: 5%;
+  text-align: right;
+  flex-direction: row-reverse;
+}
+.delivery__card-right {
+  margin-left: auto;
+  margin-right: 5%;
+}
 .btn {
   background-color: #6b1f2e;
   color: #FFE4C4;
@@ -218,8 +329,8 @@ body {
   font-size: 14px;
   font-family: "Instrument Sans", sans-serif;
   letter-spacing: 0.5px;
-  margin: 30px 78px;
   cursor: pointer;
+  text-decoration: none;
   transition: 0.2s;
   box-shadow: 0 0 24px rgba(0, 0, 0, 0.95);
   outline: none;
@@ -297,7 +408,7 @@ body {
   color: #FFE4C4;
   font-family: "Instrument Sans", sans-serif;
   font-size: 16px;
-  margin: 0 0 8px;
+  margin: -6px 0 8px;
 }
 .page-footer__address-label {
   color: #8a2a3c;

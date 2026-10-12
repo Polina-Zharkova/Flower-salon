@@ -57,8 +57,8 @@
   </div>
 </header>
 
-    <main class="main"><div class="hero">
-  <div class="hero__description"></div>
+    <main class="main">
+      <section class="hero">
   <p class="hero__name">Pétallure | floral boutique</p>
   <h1 class="hero__title">
     Живые эмоции<br />
@@ -73,11 +73,143 @@
     </p>
   </div>
 
-  <button class="btn" type="button">Заказать доставку</button>
-</div>
-</main>
-    <footer class="footer"><div class="page-footer">
-  <div class="page-footer__brand">
+  <div class="hero__btn">
+    <button class="btn" type="button">Заказать доставку</button>
+  </div>
+</section>
+ <section class="catalog">
+  <div class="catalog__header">
+    <h1 class="catalog__name">Каталог</h1>
+    <div class="catalog__btn">
+      <a href="#watch" class="btn">Смотреть все</a>
+    </div>
+  </div>
+
+  <div class="catalog__grid">
+    <article class="catalog__card">
+      <a href="#" class="catalog__link">
+        <div class="catalog__image-wrapper">
+          <img
+            src="assets/images/bouquet1.jpg"
+            alt="Букет из роз"
+            class="catalog__image"
+          />
+        </div>
+        <h3 class="catalog-card__title">Цветы</h3>
+      </a>
+    </article>
+
+    <article class="catalog__card">
+      <a href="#" class="catalog__link">
+        <div class="catalog__image-wrapper">
+          <img
+            src="assets/images/bouquet2.jpg"
+            alt="Авторский букет из разных цветов"
+            class="catalog__image"
+          />
+        </div>
+        <h3 class="catalog-card__title">Авторские букеты</h3>
+      </a>
+    </article>
+
+    <article class="catalog__card">
+      <a href="#" class="catalog__link">
+        <div class="catalog__image-wrapper">
+          <img
+            src="assets/images/bouquet3.jpg"
+            alt="Букет в коробке"
+            class="catalog__image"
+          />
+        </div>
+        <h3 class="catalog-card__title">Цветы в коробке</h3>
+      </a>
+    </article>
+
+    <article class="catalog__card">
+      <a href="#" class="catalog__link">
+        <div class="catalog__image-wrapper">
+          <img
+            src="assets/images/bouquet4.jpg"
+            alt="Дополнительные товары для покупки"
+            class="catalog__image"
+          />
+        </div>
+        <h3 class="catalog-card__title">Подарки</h3>
+      </a>
+    </article>
+
+    <article class="catalog__card">
+      <a href="#" class="catalog__link">
+        <div class="catalog__image-wrapper">
+          <img
+            src="assets/images/bouquet5.jpg"
+            alt="Букет невесты"
+            class="catalog__image"
+          />
+        </div>
+        <h3 class="catalog-card__title">Поводы</h3>
+      </a>
+    </article>
+
+    <article class="catalog__card">
+      <a href="#" class="catalog__link">
+        <div class="catalog__image-wrapper">
+          <img
+            src="assets/images/bouquet6.jpg"
+            alt="Вазы"
+            class="catalog__image"
+          />
+        </div>
+        <h3 class="catalog-card__title">Дополнительные товары</h3>
+      </a>
+    </article>
+  </div>
+</section>
+
+      <section class="delivery">
+  <div class="delivery__title">
+    <h3 class="delivery__name">Доставка</h3>
+    <h2 class="delivery__delivery-section">Как мы работаем</h2>
+  </div>
+
+  <div class="delivery__timeline">
+    <div class="delivery__step">
+      <div class="delivery__circle">1</div>
+      <div class="delivery__card-left">
+        <img src="icon-bouquet.svg" alt="Букет" />
+        <p>Собираем букет</p>
+      </div>
+    </div>
+
+    <div class="delivery__step">
+      <div class="delivery__circle">2</div>
+      <div class="delivery__card-right">
+        <img src="icon-cart.svg" alt="Корзина" />
+        <p>Оформляем заказ</p>
+      </div>
+    </div>
+
+    <div class="delivery__step">
+      <div class="delivery__circle">3</div>
+      <div class="delivery__card-left">
+        <img src="icon-florist.svg" alt="Флорист" />
+        <p>Получаете фото букета</p>
+      </div>
+    </div>
+
+    <div class="delivery__step">
+      <div class="delivery__circle">4</div>
+      <div class="delivery__card-right">
+        <img src="icon-delivery.svg" alt="Доставка" />
+        <p>Курьер доставляет</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+    </main>
+    <footer class="footer"><footer class="page-footer">
+<div class="page-footer__brand">
       <p class="page-footer__words">Цветы с душой</p>
       <a href="mailto:info@petallure.ru" class="page-footer__email"
         >info@petallure.ru</a
@@ -116,7 +248,7 @@
 
   <div class="page-footer__contacts">
 <p class="page-footer__address">
-  <span class="page-footer__address-label">Адрес:</span> 
+  <span class="page-footer__address-label">Адрес</span> 
   г. Тюмень, ул. Тюменская 
 </p>
     <a href="tel:+70000000000" class="page-footer__phone">8 (800) 000-00-00</a>
@@ -125,8 +257,9 @@
   <div class="page-footer__copyright">
     <p class="page-footer__copyright-words">© 2026 Petallure. Все права защищены.</p>
   </div>
+</footer>
   
-</div>
+
 </footer>
   </body>
 </html>
