@@ -1,68 +1,116 @@
 .delivery {
   position: relative;
   margin: 0 60px;
-  border-top: 1px solid fade(@pink, 20%); 
-  
-  ::before {
-  content: '';
-  position: absolute;
-  top: 50px;
-  bottom: 0;
-  left: 50%;
-  width: 4px;
-  background: @red;
-  transform: translateX(-50%);
-  border-radius: 2px;
-}
+  padding: 60px 0;
 
-&__step {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 37px;
-}
+  &__title {
+    font-family: @font2;
+    color: @pink;
+    text-align: center;
+    margin-bottom: 80px;
 
+    .delivery__name {
+      opacity: 0.7;
+      font-size: 14px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin: 0 0 8px;
+    }
 
-&__circle {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 40px;
-  height: 40px;
-  background: @red;
-  color: @pink;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-weight: bold;
-  z-index: 2;
-}
+    .delivery__heading {
+      font-size: 36px;
+      margin: 0;
+    }
+  }
 
+  &__timeline {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    gap: 20px;
 
-&__card {
-  background: @pink;
-  padding: 20px;
-  border-radius: 12px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
-  width: 40%;
-  display: flex;
-  align-items: center;
-  gap: 15px;
-  position: relative;
-}
+    // Горизонтальная линия строго по центру
+    &::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 0;
+      right: 0;
+      height: 6px;
+      background: fade(@red, 30%);
+      border: 1px solid @pink;
+      transform: translateY(-50%);
+      z-index: 0;
+      border-radius: 3px; 
+    }
+  }
 
+  // Колонка шага — просто контейнер фиксированной высоты
+  &__step {
+    position: relative;
+    flex: 1;
+    min-height: 320px; // увеличили, чтобы карточкам хватило места
+    z-index: 1;
+  }
 
-&__card-left {
-  margin-right: auto; 
-  margin-left: 5%;
-  text-align: right;
-  flex-direction: row-reverse; 
-}
+  // Кругляшок — ВСЕГДА строго на линии
+  &__dot {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); // центрируем точно на линии
+    width: 48px;
+    height: 48px;
+    background: @red;
+    color: @pink;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-family: @font2;
+    font-size: 18px;
+    box-shadow: 0 0 0 3px @pink; // обводка фоном, перекрывает линию
+    z-index: 2;
+  }
 
-&__card-right {
-  margin-left: auto; 
-  margin-right: 5%;
-}
+  // Карточка — общая база
+  &__card {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    background: @pink;
+    padding: 20px 24px;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    text-align: center;
+    max-width: 280px;
+    z-index: 2;
+  }
+
+  // Карточка СВЕРХУ — прижимается к линии снизу, отступ сверху от точки
+  &__step--top {
+    .delivery__card {
+      bottom: 50%;              // низ карточки на уровне линии
+      margin-bottom: 40px;      // ← отступ от точки
+    }
+  }
+
+  // Карточка СНИЗУ — прижимается к линии сверху, отступ снизу от точки
+  &__step--bottom {
+    .delivery__card {
+      top: 50%;                 // верх карточки на уровне линии
+      margin-top: 40px;         // ← отступ от точки
+    }
+  }
+
+  &__text {
+    color: rgb(52, 69, 76);
+    font-family: @font1;
+    font-size: 18px;
+    margin: 0;
+  }
 }
