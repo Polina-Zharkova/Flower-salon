@@ -30,7 +30,7 @@
     align-items: stretch;
     gap: 20px;
 
-    // Горизонтальная линия строго по центру
+
     &::before {
       content: '';
       position: absolute;
@@ -46,20 +46,18 @@
     }
   }
 
-  // Колонка шага — просто контейнер фиксированной высоты
   &__step {
     position: relative;
     flex: 1;
-    min-height: 320px; // увеличили, чтобы карточкам хватило места
+    min-height: 320px; 
     z-index: 1;
   }
 
-  // Кругляшок — ВСЕГДА строго на линии
   &__dot {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%); // центрируем точно на линии
+    transform: translate(-50%, -50%); 
     width: 48px;
     height: 48px;
     background: @red;
@@ -71,11 +69,10 @@
     font-weight: bold;
     font-family: @font2;
     font-size: 18px;
-    box-shadow: 0 0 0 3px @pink; // обводка фоном, перекрывает линию
+    box-shadow: 0 0 0 3px @pink; 
     z-index: 2;
   }
 
-  // Карточка — общая база
   &__card {
     position: absolute;
     left: 50%;
@@ -91,19 +88,19 @@
     z-index: 2;
   }
 
-  // Карточка СВЕРХУ — прижимается к линии снизу, отступ сверху от точки
+  
   &__step--top {
     .delivery__card {
-      bottom: 50%;              // низ карточки на уровне линии
-      margin-bottom: 40px;      // ← отступ от точки
+      bottom: 50%;              
+      margin-bottom: 40px;     
     }
   }
 
-  // Карточка СНИЗУ — прижимается к линии сверху, отступ снизу от точки
+  
   &__step--bottom {
     .delivery__card {
-      top: 50%;                 // верх карточки на уровне линии
-      margin-top: 40px;         // ← отступ от точки
+      top: 50%;                 
+      margin-top: 40px;         
     }
   }
 
