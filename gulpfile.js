@@ -2,16 +2,17 @@ const gulp = require('gulp');
 const less = require('gulp-less');
 const fileinclude = require('gulp-file-include');
 const browserSync = require('browser-sync').create();
+const concat = require('gulp-concat');
+const uglify = require('gulp-uglify');
 
-// Копирование картинок и других ассетов
-// encoding: false — обязательно для Gulp 5, иначе бинарные файлы портятся
+
 gulp.task('assets', function() {
     return gulp.src('src/assets/**/*', { encoding: false })
         .pipe(gulp.dest('dist/assets/'))
         .pipe(browserSync.stream());
 });
 
-// Компиляция LESS
+
 gulp.task('less', function() {
     return gulp.src('src/styles/styles.less')
         .pipe(less())
@@ -19,7 +20,16 @@ gulp.task('less', function() {
         .pipe(browserSync.stream());
 });
 
-// Сборка HTML
+
+gulp.task('js', function() {
+    return gulp.src('src/js/**/*.js')
+        .pipe(concat('script.js'))
+        .pipe(uglify())
+        .pipe(gulp.dest('dist/js/'))
+        .pipe(browserSync.stream());
+});
+
+
 gulp.task('html', function() {
     return gulp.src('src/html/index.html')
         .pipe(fileinclude({
@@ -30,8 +40,8 @@ gulp.task('html', function() {
         .pipe(browserSync.stream());
 });
 
-// Сервер + слежение за изменениями
-gulp.task('serve', gulp.series('assets', 'less', 'html', function() {
+
+gulp.task('serve', gulp.series('assets', 'less', 'js', 'html', function() {
     browserSync.init({
         server: {
             baseDir: 'dist/'
@@ -42,12 +52,11 @@ gulp.task('serve', gulp.series('assets', 'less', 'html', function() {
     });
 
     gulp.watch('src/styles/**/*.less', gulp.series('less'));
+    gulp.watch('src/js/**/*.js', gulp.series('js'));
     gulp.watch('src/html/**/*.html', gulp.series('html'));
     gulp.watch('src/assets/**/*', gulp.series('assets'));
 }));
 
-// Полная сборка
-gulp.task('build', gulp.series('assets', 'less', 'html'));
+gulp.task('build', gulp.series('assets', 'less', 'js', 'html'));
 
-// По умолчанию — сборка и запуск сервера
 gulp.task('default', gulp.series('build', 'serve'));

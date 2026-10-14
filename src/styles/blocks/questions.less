@@ -1,0 +1,128 @@
+.questions {
+  padding: 60px 0;
+  border-top: 1px solid fade(@pink, 20%);
+
+  &__title {
+    text-align: center;
+    margin-bottom: 60px;
+  }
+
+  &__text {
+    font-family: @font1;
+    font-size: 36px;
+    color: @pink;
+    margin: 0;
+  }
+
+
+  &__list {
+    display: flex;
+    gap: 60px;
+    max-width: 1200px;
+    margin: 0 auto;
+    align-items: flex-start;   
+  }
+
+  &__col {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__item {
+    background: fade(@pink, 90%);
+    border-radius: 12px;
+    overflow: hidden;
+    transition: box-shadow 0.3s ease;
+
+
+    &:not(:last-child) {
+      margin-bottom: 16px;
+    }
+
+    &.is-open {
+      box-shadow: 0 12px 32px rgba(0, 0, 0, 0.15);
+    }
+  }
+
+  &__question {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 24px 28px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    font-family: @font1;
+    font-size: 20px;
+    color: @blue;
+    text-align: left;
+    user-select: none;
+
+    &:hover {
+      color: fade(@blue, 80%);
+    }
+  }
+
+  &__icon {
+    position: relative;
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      background: @red;
+      border-radius: 2px;
+      transition: transform 0.3s ease, opacity 0.3s ease;
+    }
+
+
+    &::before {
+      width: 24px;
+      height: 2px;
+      transform: translate(-50%, -50%);
+    }
+
+
+    &::after {
+      width: 2px;
+      height: 24px;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+
+  &__item.is-open &__icon::after {
+    transform: translate(-50%, -50%) scaleY(0);
+    opacity: 0;
+  }
+
+  &__answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.35s ease, padding 0.35s ease;
+    padding: 0 28px;
+    font-family: @font1;
+    font-size: 16px;
+    line-height: 1.6;
+    color: @blue;
+
+    p {
+      margin: 0;
+    }
+  }
+
+  &__item.is-open &__answer {
+    max-height: 400px;         
+    padding: 0 28px 24px;
+  }
+}
+
+

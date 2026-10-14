@@ -1,0 +1,1 @@
+document.addEventListener("DOMContentLoaded",()=>{document.querySelectorAll(".questions__question").forEach(e=>{e.addEventListener("click",()=>{e.closest(".questions__item").classList.toggle("is-open")})})});
