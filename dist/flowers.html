@@ -1,0 +1,416 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+  <meta charset="UTF-8" />
+  <meta name="keywords" content="flowers, salon, art" />
+  <title>Flowers salon</title>
+  <link rel="stylesheet" href="styles/styles.css" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+    rel="stylesheet"
+  />
+</head>
+
+  <body class="page">
+    <header class="page-header">
+  <div class="page-header__logo">
+    <svg class="page-header__icon" width="150" height="150">
+      <use href="assets/icons/logo.svg#logo"></use>
+    </svg>
+  </div>
+  <nav class="page-header__nav">
+    <ul class="page-header__list">
+      <li class="page-header__item">
+        <a href="#" class="page-header__link page-header__link--catalog"
+          >Каталог</a
+        >
+        <div class="page-header__dropdown">
+          <div class="page-header__dropdown-col">
+            <a href="flowers.html" class="page-header__dropdown-link">Цветы</a>
+            <a href="#" class="page-header__dropdown-link">Авторские букеты</a>
+            <a href="#" class="page-header__dropdown-link">Подарки</a>
+            <a href="#" class="page-header__dropdown-link">Поводы</a>
+          </div>
+        </div>
+      </li>
+      <li class="page-header__item">
+        <a href="#" class="page-header__link">Доставка</a>
+      </li>
+      <li class="page-header__item">
+        <a href="#" class="page-header__link">Акции</a>
+      </li>
+      <li class="page-header__item">
+        <a href="#" class="page-header__link">Контакты</a>
+      </li>
+    </ul>
+  </nav>
+  <div class="page-header__right">
+    <svg class="page-header__right-basket">
+      <use href="assets/icons/basket.svg#basket"></use>
+    </svg>
+    <svg class="page-header__right-like">
+      <use href="assets/icons/like.svg#like"></use>
+    </svg>
+  </div>
+</header>
+
+    <main class="main"><section class="catalog-page">
+  <nav class="catalog-page__breadcrumbs">
+    <ol class="breadcrumbs__list">
+      <li class="breadcrumbs__item">
+        <a href="index.html" class="breadcrumbs__link">Главная</a>
+      </li>
+      <li class="breadcrumbs__item">
+        <span class="breadcrumbs__current" aria-current="page">Каталог</span>
+      </li>
+    </ol>
+  </nav>
+
+  <div class="catalog-page__title">
+    <h2 class="catalog-page__title-name">Каталог букетов</h2>
+  </div>
+
+  <div class="catalog-page__grid">
+    <article
+      class="catalog-card"
+      data-title="Классический букет из глубоких красных роз с эвкалиптом и гипсофилой"
+      data-price="5 000 р."
+      data-image="assets/images/b1.jpg"
+    >
+      <a href="#" class="catalog-card__link">
+        <div class="catalog-card__image-wrapper">
+          <img
+            src="assets/images/b1.jpg"
+            alt="Букет"
+            class="catalog-card__image"
+          />
+        </div>
+        <h3 class="catalog-card__title">
+          Классический букет из глубоких красных роз с эвкалиптом и гипсофилой
+        </h3>
+        <h4 class="catalog-card__price">5 000 р.</h4>
+      </a>
+    </article>
+
+    <article
+      class="catalog-card__card"
+      data-title="Полевой букет из ромашек, лаванды и васильков в деревенском стиле"
+      data-price="6 000 р."
+      data-image="assets/images/b2.jpg"
+    >
+      <a href="#" class="catalog-card__link">
+        <div class="catalog-card__image-wrapper">
+          <img
+            src="assets/images/b2.jpg"
+            alt="Букет"
+            class="catalog-card__image"
+          />
+        </div>
+        <h3 class="catalog-card__title">
+          Полевой букет из ромашек, лаванды и васильков в деревенском стиле
+        </h3>
+        <h4 class="catalog-card__price">6 000 р.</h4>
+      </a>
+    </article>
+
+    <article
+      class="catalog-card__card"
+      data-title="Экзотический тропический букет с ярко-оранжевой геликонией и белыми
+          орхидеями"
+      data-price="7 000 р."
+      data-image="assets/images/b3.jpg"
+    >
+      <a href="#" class="catalog-card__link">
+        <div class="catalog-card__image-wrapper">
+          <img
+            src="assets/images/b3.jpg"
+            alt="Букет"
+            class="catalog-card__image"
+          />
+        </div>
+        <h3 class="catalog-card__title">
+          Экзотический тропический букет с ярко-оранжевой геликонией и белыми
+          орхидеями
+        </h3>
+        <h4 class="catalog-card__price">7 000 р.</h4>
+      </a>
+    </article>
+
+    <article
+      class="catalog-card__card"
+      data-title="Нежный пастельный весенний букет с пышными пионами, тюльпанами и
+          ранункулюсами"
+      data-price="8 000 р."
+      data-image="assets/images/b4.jpg"
+    >
+      <a href="#" class="catalog-card__link">
+        <div class="catalog-card__image-wrapper">
+          <img
+            src="assets/images/b4.jpg"
+            alt="Букет"
+            class="catalog-card__image"
+          />
+        </div>
+        <h3 class="catalog-card__title">
+          Нежный пастельный весенний букет с пышными пионами, тюльпанами и
+          ранункулюсами
+        </h3>
+        <h4 class="catalog-card__price">8 000 р.</h4>
+      </a>
+    </article>
+
+    <article
+      class="catalog-card__card"
+      data-title="Теплый осенний букет с бордовыми георгинами, оранжевыми хризантемами и
+          колосьями пшеницы"
+      data-price="9 000 р."
+      data-image="assets/images/b5.jpg"
+    >
+      <a href="#" class="catalog-card__link">
+        <div class="catalog-card__image-wrapper">
+          <img
+            src="assets/images/b5.jpg"
+            alt="Букет"
+            class="catalog-card__image"
+          />
+        </div>
+        <h3 class="catalog-card__title">
+          Теплый осенний букет с бордовыми георгинами, оранжевыми хризантемами и
+          колосьями пшеницы
+        </h3>
+        <h4 class="catalog-card__price">9 000 р.</h4>
+      </a>
+    </article>
+
+    <article
+      class="catalog-card__card"
+      data-title="Минималистичный современный букет из элегантных белых калл и анемонов"
+      data-price="10 000 р."
+      data-image="assets/images/b6.jpg"
+    >
+      <a href="#" class="catalog-card__link">
+        <div class="catalog-card__image-wrapper">
+          <img
+            src="assets/images/b6.jpg"
+            alt="Букет"
+            class="catalog-card__image"
+          />
+        </div>
+        <h3 class="catalog-card__title">
+          Минималистичный современный букет из элегантных белых калл и анемонов
+        </h3>
+        <h4 class="catalog-card__price">10 000 р.</h4>
+      </a>
+    </article>
+
+    <article
+      class="catalog-card__card"
+      data-title="Бохо-букет из сухоцветов: пышной пампасной травы, статицы и сушеных
+          роз"
+      data-price="11 000 р."
+      data-image="assets/images/b7.jpg"
+    >
+      <a href="#" class="catalog-card__link">
+        <div class="catalog-card__image-wrapper">
+          <img
+            src="assets/images/b7.jpg"
+            alt="Букет"
+            class="catalog-card__image"
+          />
+        </div>
+        <h3 class="catalog-card__title">
+          Бохо-букет из сухоцветов: пышной пампасной травы, статицы и сушеных
+          роз
+        </h3>
+        <h4 class="catalog-card__price">11 000 р.</h4>
+      </a>
+    </article>
+
+    <article
+      class="catalog-card__card"
+      data-title="Яркий летний букет с подсолнухами, синим дельфиниумом и сочной зеленью"
+      data-price="12 000 р."
+      data-image="assets/images/b8.jpg"
+    >
+      <a href="#" class="catalog-card__link">
+        <div class="catalog-card__image-wrapper">
+          <img
+            src="assets/images/b8.jpg"
+            alt="Букет"
+            class="catalog-card__image"
+          />
+        </div>
+        <h3 class="catalog-card__title">
+          Яркий летний букет с подсолнухами, синим дельфиниумом и сочной зеленью
+        </h3>
+        <h4 class="catalog-card__price">12 000 р.</h4>
+      </a>
+    </article>
+
+    <article
+      class="catalog-card__card"
+      data-title="Роскошный каскадный свадебный букет с белыми розами, астильбой и
+          плющом"
+      data-price="13 000 р."
+      data-image="assets/images/b9.jpg"
+    >
+      <a href="#" class="catalog-card__link">
+        <div class="catalog-card__image-wrapper">
+          <img
+            src="assets/images/b9.jpg"
+            alt="Букет"
+            class="catalog-card__image"
+          />
+        </div>
+        <h3 class="catalog-card__title">
+          Роскошный каскадный свадебный букет с белыми розами, астильбой и
+          плющом
+        </h3>
+        <h4 class="catalog-card__price">13 000 р.</h4>
+      </a>
+    </article>
+
+    <article
+      class="catalog-card__card"
+      data-title="Драматичный букет в темных тонах с фиолетовыми каллами, черными розами
+          и серебряными ягодами брунии"
+      data-price="14 000 р."
+      data-image="assets/images/b10.jpg"
+    >
+      <a href="#" class="catalog-card__link">
+        <div class="catalog-card__image-wrapper">
+          <img
+            src="assets/images/b10.jpg"
+            alt="Букет"
+            class="catalog-card__image"
+          />
+        </div>
+        <h3 class="catalog-card__title">
+          Драматичный букет в темных тонах с фиолетовыми каллами, черными розами
+          и серебряными ягодами брунии
+        </h3>
+        <h4 class="catalog-card__price">14 000 р.</h4>
+      </a>
+    </article>
+  </div>
+  <div class="product-modal" id="product-modal">
+  <div class="product-modal__overlay"></div>
+
+  <div class="product-modal__content">
+    <button class="product-modal__close" type="button" aria-label="Закрыть">
+      <span></span>
+      <span></span>
+    </button>
+
+    <div class="product-modal__body">
+      <!-- Левая часть: Фото -->
+      <div class="product-modal__gallery">
+        <button class="product-modal__back">← Назад в каталог</button>
+        <div class="product-modal__image-wrapper">
+          <img
+            src=""
+            alt="Букет"
+            class="product-modal__image"
+            id="modal-image"
+          />
+        </div>
+      </div>
+
+      <!-- Правая часть: Информация -->
+      <div class="product-modal__info">
+        <h2 class="product-modal__title" id="modal-title">Название букета</h2>
+        <div class="product-modal__price" id="modal-price">0 р.</div>
+
+        <div class="product-modal__sizes">
+          <span class="product-modal__sizes-label">Размер</span>
+          <div class="product-modal__sizes-list">
+            <button class="product-modal__size-btn" type="button">S</button>
+            <button class="product-modal__size-btn is-active" type="button">
+              M
+            </button>
+            <button class="product-modal__size-btn" type="button">L</button>
+            <button class="product-modal__size-btn" type="button">XL</button>
+          </div>
+        </div>
+
+        <button class="product-modal__add-btn" type="button">
+          Добавить в корзину
+        </button>
+
+        <div class="product-modal__composition">
+          <p>
+            <strong>В состав букета входит:</strong> сезонные цветы, зелень,
+            упаковка.
+          </p>
+          <p>
+            <strong>На фото представлен букет в размере M.</strong><br />Более
+            подробную информацию можно уточнить по тел. +79326238825
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</section>
+</main>
+    <footer class="footer"><footer class="page-footer">
+<div class="page-footer__brand">
+      <p class="page-footer__words">Цветы с душой</p>
+      <a href="mailto:info@petallure.ru" class="page-footer__email"
+        >info@petallure.ru</a
+      >
+  </div>
+
+  <div class="page-footer__information">
+    <ul class="page-footer__lists">
+      <li class="page-footer__items">
+        Каталог
+        <ul class="page-footer__sub-list">
+          <li><a href="flowers.html" class="page-footer__point-link">Цветы</a></li>
+          <li>
+            <a href="#" class="page-footer__point-link">Авторские букеты</a>
+          </li>
+          <li><a href="#" class="page-footer__point-link">Подарки</a></li>
+          <li><a href="#" class="page-footer__point-link">Поводы</a></li>
+        </ul>
+      </li>
+    </ul>
+
+    <ul class="page-footer__lists">
+      <li class="page-footer__items">Покупателям
+        <ul class="page-footer__sub-list">
+        <li>
+          <a href="#" class="page-footer__point-link">Доставка и оплата</a>
+        </li>
+        <li>
+          <a href="#" class="page-footer__point-link">Фото перед отправкой</a>
+        </li>
+        <li><a href="#" class="page-footer__point-link">Помощь флориста</a></li>
+      </li>
+      </ul>
+    </ul>
+  </div>
+
+  <div class="page-footer__contacts">
+<p class="page-footer__address">
+  <span class="page-footer__address-label">Адрес</span> 
+  г. Тюмень, ул. Тюменская 
+</p>
+    <a href="tel:+70000000000" class="page-footer__phone">8 (800) 000-00-00</a>
+    <p class="page-footer__schedule">Ежедневно 9:00-21:00</p>
+  </div>
+  <div class="page-footer__copyright">
+    <p class="page-footer__copyright-words">© 2026 Petallure. Все права защищены.</p>
+  </div>
+</footer>
+  
+
+</footer>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>

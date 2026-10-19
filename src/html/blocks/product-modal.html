@@ -1,0 +1,58 @@
+<div class="product-modal" id="product-modal">
+  <div class="product-modal__overlay"></div>
+
+  <div class="product-modal__content">
+    <button class="product-modal__close" type="button" aria-label="Закрыть">
+      <span></span>
+      <span></span>
+    </button>
+
+    <div class="product-modal__body">
+      <!-- Левая часть: Фото -->
+      <div class="product-modal__gallery">
+        <button class="product-modal__back">← Назад в каталог</button>
+        <div class="product-modal__image-wrapper">
+          <img
+            src=""
+            alt="Букет"
+            class="product-modal__image"
+            id="modal-image"
+          />
+        </div>
+      </div>
+
+      <!-- Правая часть: Информация -->
+      <div class="product-modal__info">
+        <h2 class="product-modal__title" id="modal-title">Название букета</h2>
+        <div class="product-modal__price" id="modal-price">0 р.</div>
+
+        <div class="product-modal__sizes">
+          <span class="product-modal__sizes-label">Размер</span>
+          <div class="product-modal__sizes-list">
+            <button class="product-modal__size-btn" type="button">S</button>
+            <button class="product-modal__size-btn is-active" type="button">
+              M
+            </button>
+            <button class="product-modal__size-btn" type="button">L</button>
+            <button class="product-modal__size-btn" type="button">XL</button>
+          </div>
+        </div>
+
+        <button class="product-modal__add-btn" type="button">
+          Добавить в корзину
+        </button>
+
+        <div class="product-modal__composition">
+          <p>
+            <strong>В состав букета входит:</strong> сезонные цветы, зелень,
+            упаковка.
+          </p>
+          <p>
+            <strong>На фото представлен букет в размере M.</strong><br />Более
+            подробную информацию можно уточнить по тел. +79326238825
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

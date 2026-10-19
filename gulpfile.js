@@ -31,7 +31,7 @@ gulp.task('js', function() {
 
 
 gulp.task('html', function() {
-    return gulp.src('src/html/index.html')
+    return gulp.src('src/html/*.html')
         .pipe(fileinclude({
             prefix: '@@',
             basepath: 'src/html/'
