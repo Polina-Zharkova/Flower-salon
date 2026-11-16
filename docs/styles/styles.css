@@ -171,7 +171,7 @@ body {
   height: 70px;
 }
 .hero {
-  background-image: url('../assets/bouquet.jpg');
+  background-image: url('/flower-salon/assets/images/bouquet.jpg');
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
